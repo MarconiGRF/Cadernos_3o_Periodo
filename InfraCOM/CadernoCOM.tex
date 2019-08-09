@@ -33,9 +33,17 @@
     \\$\rightarrow$ Núcleo: cabos interconectados.
 
     \subsection{Tecnologias de conexão}
-    $\rightarrow$ \textbf{DSL:} Usam o mesmo cabo para transmissão de telefonia e internet (cabo com par) que é levado até o DSLAM este que divide os dados respectivamente pelo seu tipo. Tem respectivamente US $\leq$ 2,5Mbps e DS $\leq$ 24Mbps.
-    \\$\rightarrow$ \textbf{Coaxial:} Usam um único cabo coaxial para transmissão de dados de internet e TV (cada um usando faixas de frequência reservadas para cada serviço) e nas pontas são usados multiplexadores para dividir e categorizar a banda, chegando até o \textbf{cable headend}. Geralmente tipo HFC assimétrico.
-    \\$\rightarrow$ \textbf{Redes residenciais:} Normalmente usam cabos Ethernet, com geralmente um AP usando padrão IEEE 802.11*
+    $\rightarrow$ \textbf{DSL:} Usam o mesmo cabo para transmissão de telefonia e internet (cabo com par) que é levado até o DSLAM (DSL Access Multiplexer) este que divide os dados respectivamente pelo seu tipo. Tem respectivamente US $\leq$ 2,5Mbps e DS $\leq$ 24Mbps.
+    \\$\rightarrow$ \textbf{Coaxial:} Usam um único cabo coaxial para transmissão de dados de internet e TV (cada um usando faixas de frequência reservadas para cada serviço) e nas pontas são usados multiplexadores para dividir e categorizar a banda, chegando até o \textbf{cable headend}. Geralmente usam do tipo HFC assimétrico, além de compartilhamento de estrutura podendo tornar a rede mais lenta.
+    \\$\rightarrow$ \textbf{Redes Residenciais:} Normalmente usam cabos Ethernet, com geralmente um AP usando padrão IEEE 802.11*
+    \\$\rightarrow$ \textbf{Redes Corporativas:} Usualmente usam a mesma infraestrutura de uma rede residencial (em questão de cabos), porém usando Switches e ISPs institucionais.
+    \\$\rightarrow$ \textbf{Redes Sem Fio:} Padrão WiFi IEEE 802.11, respectivamente com suas transmissões: b/g:11/54Mbps, n:até 600Mbps e ac:até 1Gbps.
+
+    \subsection{Hosts}
+    $\rightarrow$ A função de transmissão de um host é receber mensagens da aplicação (qualquer), quebra em pequenos pacotes de L bits e os transmite a uma taxa R de transmissão.
+    \\$\rightarrow$ O atraso de transmissão do pacote é dado por $\frac{L (tamanho)}{R (velocidade)}$
+    \\$\rightarrow$ Os meios físicos de transmissão são os que transferem bits. Geralmente divididos por meios \textbf{guiados} (cabos) ou \textbf{não guiados} (ondas magnéticas).
+    
 
 \bibliography{references}
 \end{document}

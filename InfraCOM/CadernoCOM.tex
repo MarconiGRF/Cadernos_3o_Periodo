@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, portrait, margin=1in]{geometry}
+\bibliographystyle{ieeetr}
+
+\begin{document}
+\nocite{*}
+
+\title{Caderno de InfraCOM}
+\author{Marconi Gomes}
+
+\maketitle
+
+
+\section{Introdução}
+    - Noções de hosts
+    \\- Aplicações
+    \\- Meios de comunicação (cabeado ou não)
+    
+    \subsection{Componentes ou comutadores e Infraestrutura}
+    $\rightarrow$ Roteadores, Switches, etc...
+    \\$\rightarrow$ ISPs (Internet Service Providers) conectados
+    \\$\rightarrow$ Protocolos
+    \\$\rightarrow$ RFCs: Request for comments (Definição: São documentos para disponibilização de protocolos públicos, gerenciados por força tarefa de engenheiros da internet.)
+    \\$\rightarrow$ IETF: Internet Engineering Task Force
+    
+    \subsection{Protocolos}
+    $\rightarrow$ O que são: Conjunto de \textbf{regras} que definem o \textbf{formato, ordem e ações} sobre a \textbf{transmissão} das mensagens enviadas e recebidas entre entidades de redes. \quad \quad
+    \\Exemplo: O protocolo para abrir um site (TCP) é dado por fazer uma requisição, o servidor responde com um arquivo e etc.
+
+    \subsection{Internet}
+    $\rightarrow$ Endpoints: Hosts (Computadores e servidores).
+    \\$\rightarrow$ Meios de acesso: Tipo de transmissão, se é cabeada ou não.
+    \\$\rightarrow$ Núcleo: cabos interconectados.
+
+    \subsection{Tecnologias de conexão}
+    $\rightarrow$ \textbf{DSL:} Usam o mesmo cabo para transmissão de telefonia e internet (cabo com par) que é levado até o DSLAM este que divide os dados respectivamente pelo seu tipo. Tem respectivamente US $\leq$ 2,5Mbps e DS $\leq$ 24Mbps.
+    \\$\rightarrow$ \textbf{Coaxial:} Usam um único cabo coaxial para transmissão de dados de internet e TV (cada um usando faixas de frequência reservadas para cada serviço) e nas pontas são usados multiplexadores para dividir e categorizar a banda, chegando até o \textbf{cable headend}. Geralmente tipo HFC assimétrico.
+
+\bibliography{references}
+\end{document}

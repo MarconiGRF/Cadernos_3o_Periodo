@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, portrait, margin=1in]{geometry}
+\bibliographystyle{ieeetr}
+
+\begin{document}
+\nocite{*}
+
+\title{Caderno de InfraHard}
+\author{Marconi Gomes}
+
+\maketitle
+
+
+\section{Introdução - Instruções e funcionamento básico}
+    \subsection{Abstração}
+    As linguages de programação podem ser divididas em \textbf{4 níveis}:
+    \\- Linguagem de Máquina (binário)
+    \\- Linguagem de montagem (Assembly)
+    \\- Linguagem de alto nível (Java, C++, etc)
+    \\- Linguagem de 4ª gearção (PL/SQL, NATURAL, etc)
+    \\~\\O menor nível de abstração que o programador pode ver antes do código de realmente chegar ao binário, chama-se Instruction Set Architeture (ISA), que é um \textbf{repositório de instruções}, ela é realmente a interface entre Software e Hardware. Ela vai me dizer quais as intruções e registradores que posso usar, como acessar a memória, etc.
+
+    \subsection{Assembly}
+    É uma linguagem que é dependente de arquitetua, ou seja, para cada tipo (x86, ARM) é um tipo de assembly diferente.
+
+    \subsection{Compilador}
+    \textbf{Definição:} é um programa que traduz de uma li-nguagem de amis alto nível (ex. Java) para uma de menor nível (assembly) que o computador entende.
+    \\A diferença entre um \textbf{compilador} e um \textbf{interpretador} é que o compilador traduz tudo primeiramente apenas e depois executa. O interpretador traduz e executa cada linha por vez. 
+    \\Exemplos de linguages compiladas (completamente): C, C++, etc.
+    \\Exemplos de linguages interpretadas (completamente): JavaScript, Python.
+    \\Exemplos de linguages semi-interpretadas e semi-compiladas: Java!
+
+    \subsection{Visão funcional de um computador}
+    Um computador pode (e deve) realizar 4 ações: 
+    \\$\rightarrow$ Mover dados (Barramento)
+    \\$\rightarrow$ Controlar ações (CPU)
+    \\$\rightarrow$ Armazenar dados (Memória)
+    \\$\rightarrow$ Processar dados (CPU)
+    \\~\\A CPU faz sempre as seguintes coisas:  
+    \\ Busca $\rightarrow$ Decodificação $\rightarrow$ Execução
+    \\~\\Os seguintes registradores são os mais comuns num computador:
+    \\\textbf{PC (Program counter)}: Buscar o endereço da instrução
+    \\\textbf{MAR (Memory Address Register)}: Guarda dinamicamente endereços que possam ser usados posteriormente.
+    \\\textbf{IR (Instruction Register)}: Recebe a instrução do PC e a armazena.
+    \\\textbf{AC (Acumulator)}: É um registrador comum genérico.
+    
+\bibliography{references}
+\end{document} 

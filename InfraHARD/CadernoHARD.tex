@@ -5,7 +5,7 @@
 \begin{document}
 \nocite{*}
 
-\title{Caderno de InfraHard}
+\title{Caderno de Infraestrutura de Hardware}
 \author{Marconi Gomes}
 
 \maketitle
@@ -36,13 +36,35 @@
     \\$\rightarrow$ Controlar ações (CPU)
     \\$\rightarrow$ Armazenar dados (Memória)
     \\$\rightarrow$ Processar dados (CPU)
-    \\~\\A CPU faz sempre as seguintes coisas:  
+    \\~\\Logo, a CPU faz sempre as seguintes coisas:  
     \\ Busca $\rightarrow$ Decodificação $\rightarrow$ Execução
     \\~\\Os seguintes registradores são os mais comuns num computador:
     \\\textbf{PC (Program counter)}: Buscar o endereço da instrução
     \\\textbf{MAR (Memory Address Register)}: Guarda dinamicamente endereços que possam ser usados posteriormente.
     \\\textbf{IR (Instruction Register)}: Recebe a instrução do PC e a armazena.
     \\\textbf{AC (Acumulator)}: É um registrador comum genérico.
+
+    \subsection{Evolução das ISAs}
+    Inicialmente as ISAs tinham poucas instruções básicas, dificultando o trabalho dos programadores, então foram implementadas instruções mais complexas,
+    assim surgiram os \textbf{CISC} (Complex Instruction Set Computer) e \textbf{RISC} (Reduced Instruction Set Computer).
+    \\Exemplos de processadores CISC: Intel x86, AMD, etc\dots
+    \\Exemplos de processadores RISC: ARMS, MIPS, etc\dots
+
+\section{MIPS}
+    \subsection{Instruções - Aritméticas}
+    As instruções aritméticas no MIPS \textbf{sempre} (exceto multiplicação e divisão) \textbf{possuem 3 operandos}: destino, fonte 1 e fonte 2.
+    \\- Cada instrução só faz \textbf{uma} operação aritmética.
+    \\- Para ser mais eficiente, os operandos de uma instrução aritmética devem estar nos registradores.
+    \\- No MIPS \textbf{todos} os registradores possuem 32 bits, ou seja, 4bytes e logo 32 bits são uma \textbf{word}.
+    \\~\\- No MIPS os registradores tem nomes da forma: \$sX (para armazenar variáveis de programas, onde \textbf{X varia de 0 a 7}) e \$tY (para armazenar valores temporários, onde \textbf{Y varia de 0 até 9}).
+    \\Internamente, o processador categoriza iniciando de \$t0 até \$t7 como os registradores 0 a 15, os \$s0 até \$s7 sendo de 16 a 23, e finalmente \$t8 e \$t9 como 24 e 25 respectivamente.
+    \\~\\\textbf{Formato de instrução:} O espaço de 32 bits (word) é dividido em 6 espaços, respectivamente por:
+    \\1º - op (6 bits) --- [Armazena o opcode da instrução]
+    \\2º - rs (5 bits) --- [Registrador que contém 1º operando fonte]
+    \\3º - rt (5 bits) --- [Registrador que contém 2º operando fonte]
+    \\4º - rd (5 bits)  --- [Registrador destino que contém o resultado]
+    \\5º - shamt (5 bits)  --- [Shift Amount, que não é utilizado para add e sub]
+    \\6º - funct (6 bits) --- [Função que estende o opcode]
     
 \bibliography{references}
 \end{document} 

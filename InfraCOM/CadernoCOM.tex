@@ -28,7 +28,18 @@
     \\Exemplo: O protocolo para abrir um site (TCP) é dado por fazer uma requisição, o servidor responde com um arquivo e etc.
 
     \subsection{Internet}
-    $\rightarrow$ Endpoints: Hosts (Computadores e servidores).
+    \textbf{Definição:} São sistemas finais conectados à outras redes através de ISPs, ou seja, a internet é uma rede de redes ISPs conectados, possibilitando assim com que dois hosts possam se comunicar, pois existe um caminho entre eles.
+    \\A internet é muito complexa e sua evolução foi guiada por \textbf{políticas nacionais e enconômicas}. 
+    \\~\\\textbf{Pergunta:} Como podemos refazer os passos para chegar (aproximadamente) ao estado atual da internet?
+    \\\textbf{Resposta:} A dissipação de ISPs (nacionais e continentais) especializados, que se comunicam com outros ISPs de mesmo tipo utilizando pontos de troca de tráfego (Internet eXchange Point - \textbf{IXP}), até para casos que um IXP não esteja disponível possa ser utilizado outro caminho de comunicação.
+    \\~\\Categorizando os ISPs, ficariam da seguinte forma:
+    \\- ISP Comerciais (Tier 1): Google, Embratel, etc...
+    \\- Redes de provedores de conteúdo: Google, Amazon, etc... {Essas conectam a internet aos seus datacenters}
+    \\- IXP: Internet eXchange Points (Conexões geralmente intercontinentais).
+    \\- ISP Regionais (Nordeste, Norte, etc)
+    \\- ISP de acesso (Cidades)
+    \\~\\\textbf{Conceitos:}
+    \\$\rightarrow$ Endpoints: Hosts (Computadores e servidores).
     \\$\rightarrow$ Meios de acesso: Tipo de transmissão, se é cabeada ou não.
     \\$\rightarrow$ Núcleo: cabos interconectados.
 
@@ -44,6 +55,28 @@
     \\$\rightarrow$ O atraso de transmissão do pacote é dado por $\frac{L (tamanho)}{R (velocidade)}$.
     \\$\rightarrow$ Os meios físicos de transmissão são os que transferem bits. Geralmente divididos por meios \textbf{guiados} (cabos) ou \textbf{não guiados} (ondas magnéticas).
     
+    \subsection{Comutação de circuitos}
+    Definição: Estabelecer um caminho exclusivo (no sentido de não poder ser usado por outros dispotivos ao mesmo tempo) para a comunicação entre dois dispositivos. O segmento de circuito (ou seja, o caminho/ligação, geralmente formado por 2 ou mais encaminhadores/roteadores) fica ocioso se não estiver sendo usado pela "chamada".
+    \\~\\No mundo real, para se realizar a multiplexação de frequências usa-se o \textbf{FDM - (Frequency Division Multiplexing)} ou o \textbf{TDM - (Time Division Multiplexing)}. 
+    \\$\rightarrow$ O FDM trabalha de forma a dividir o sinal para transmitir as informações em cada frequência específica para dispositivos específicos. A divisão pode ser feita de forma fixa ou sob demanda, ou seja, dividir mais ou menos o canal disponível, assim no método FDM todos podem falar ao mesmo tempo.
+    \\$\rightarrow$ Já no TDM, como o nome sugere, toda a frequência do meio de comunicação é usada, entretanto cada dispositivo possui um tempo limite de tempo para transmitir os dados de forma padronizada. Dessa forma, o modo TDM não permite que dois ou mais dispositivos falem ao mesmo tempo. Apesar de parecer nos dias de hoje, não é o que acontece, pois o TDM aplicado atualmente é tão rápido que o usuário não percebe a divisão de tempo.
+    \\\textbf{Observação:} O meio de comunicação usado para transmitir informação, tanto no TDM quanto no FDM, pode ser tanto com cabos ou sem cabos (Wireless ou não).
 
+    \subsection{Comutação de pacotes}
+    $\rightarrow$ Esse novo conceito permite que mais usuários se comunicando usando a rede. 
+    \\Supondo que casa usuário quando ativo transmite a 100kbps e fica ativo à 10\% do tempo total, se houvessem 35 usuários nessa mesma rede com a mesma velocidade, a probabilidade de mais que 10 usuários estejam ativos ao mesmo tempo é menor do que 0,004s.
+
+    \subsection{CP vs CI}
+    \textbf{Pontos fortes da CP:}
+    \\$\rightarrow$ É excelente para transmissão de rajada (ou seja, envia uma grande quantidade de dados e depois fica em silêncio).
+    \\$\rightarrow$ Uso compartilhado de recursos.
+    \\$\rightarrow$ É mais simples, não precisa estabelecer uma chamada (reservar os recursos para única e exclusivamente para aqueles dois dispositivos se comunicarem).
+    \\~\\\textbf{Pontos fracos da CP:}
+    \\$\rightarrow$ Pode haver congestionamento excessivo durante a transmissão (mesmo que seja de probabilidade mínima, ainda pode acontecer). 
+    \\Para isso eu preciso de protocoles que garantam a transferência de dados sem erros ou falta de informações, além disso para controlar o congestionamento.
+    \\~\\Pergunta: E qual o impacto do congestionamento? 
+    \\Resposta: O atraso e perda de pacotes.
+    \\~\\\textbf{Pontos fortes da CI:}
+    \\$\rightarrow$ Garantia de desempenho (usando toda a banda necessária), já que o canal de comunicação é exclusivo.
 \bibliography{references}
 \end{document}

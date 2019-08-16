@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.6)  13 AUG 2019 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.6)  15 AUG 2019 16:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -112,35 +112,45 @@ Overfull \hbox (3.98141pt too wide) in paragraph at lines 15--18
 \OT1/cmr/m/n/12 Ele se trans-forma num pro-cesso e ex-e-cuta in-stru^^Xc~oes (\OT1/cmr/bx/n/12 uma por vez, com-par-til-hando tempo\OT1/cmr/m/n/12 ). 
  []
 
-(./CadernoSoft.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 20--1
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--1
+Underfull \hbox (badness 10000) in paragraph at lines 20--29
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--37
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./CadernoSoft.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [1
+) [2] (./CadernoSoft.aux) )
+(\end occurred inside a group at level 1)
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./CadernoSoft.aux) ) 
+### simple group (level 1) entered at line 44 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
  774 strings out of 494561
  10686 string characters out of 6177455
- 73459 words of memory out of 5000000
+ 75459 words of memory out of 5000000
  4488 multiletter control sequences out of 15000+600000
  8808 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 24i,6n,32p,347b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 24i,6n,32p,473b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on CadernoSoft.pdf (1 page, 49642 bytes).
+Output written on CadernoSoft.pdf (2 pages, 54439 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
- 16 compressed objects within 1 object stream
+ 27 PDF objects out of 1000 (max. 8388607)
+ 18 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

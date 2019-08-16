@@ -1,6 +1,9 @@
 \documentclass[12pt]{article}
 \usepackage[a4paper, portrait, margin=1in]{geometry}
 \bibliographystyle{ieeetr}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 \begin{document}
 \nocite{*}
@@ -58,13 +61,30 @@
     \\- No MIPS \textbf{todos} os registradores possuem 32 bits, ou seja, 4bytes e logo 32 bits são uma \textbf{word}.
     \\~\\- No MIPS os registradores tem nomes da forma: \$sX (para armazenar variáveis de programas, onde \textbf{X varia de 0 a 7}) e \$tY (para armazenar valores temporários, onde \textbf{Y varia de 0 até 9}).
     \\Internamente, o processador categoriza iniciando de \$t0 até \$t7 como os registradores 0 a 15, os \$s0 até \$s7 sendo de 16 a 23, e finalmente \$t8 e \$t9 como 24 e 25 respectivamente.
-    \\~\\\textbf{Formato de instrução:} O espaço de 32 bits (word) é dividido em 6 espaços, respectivamente por:
+    \\~\\\textbf{Formato R de instrução:} O espaço de 32 bits (word) é dividido em 6 espaços, respectivamente por:
     \\1º - op (6 bits) --- [Armazena o opcode da instrução]
     \\2º - rs (5 bits) --- [Registrador que contém 1º operando fonte]
     \\3º - rt (5 bits) --- [Registrador que contém 2º operando fonte]
     \\4º - rd (5 bits)  --- [Registrador destino que contém o resultado]
     \\5º - shamt (5 bits)  --- [Shift Amount, que não é utilizado para add e sub]
     \\6º - funct (6 bits) --- [Função que estende o opcode]
+    \\~\\\textbf{Representando ADD e SUB na Máquina:} É função do compílador associar as variáveis a registradores. Veja o exemplo:
+    \\~\\\textit{f = (g + h) – (i + j);}
+    \\~\\ As variáveis f, g, h, i, j estão atribuídas, respectivamente, aos registradores  \$s0, \$s1, \$s2, \$s3 e \$s4. O programa compilado em MIPS ficará da seguinte forma:
+    \\~\\\textit{add \$t0, \$s1, \$s2} (registrador \$t0 contém g + h)
+    \\\textit{add \$t1, \$s3, \$s4} (registrador \$t1 contém i + j)
+    \\\textit{sub \$s0, \$t0, \$t1} (f recebe \$t0 – \$t1, que equivale a (g + h)–(i + j))
+    \\~\\\textbf{Operações de Transferência de Dados:} move dados entre a memória e o registrador.
+    \\- Para acessar uma word na memória, a instrução deve fornecer o \textbf{endereço da memória}.
+    \\- A memória é apenas um array grande e unidimensional. O endereço da memória é o index do array.
+    \\~\\Operação \textbf{lw} (\textbf{l}oad \textbf{w}ord):
+    \\~\\\textit{lw r, offset(end\_inicial)}
+    \\~\\- \textit{r}: registrador que será carregado;
+    \\- \textit{offset}: uma constante de deslocamento;
+    \\- \textit{end\_inicial}: um registrador de base que contém o endereço inicial.
+    
+
+    
     
 \bibliography{references}
 \end{document} 

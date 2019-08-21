@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.6)  14 AUG 2019 16:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.6)  21 AUG 2019 15:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -47,22 +47,60 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
-) (./CadernoHARD.aux)
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/11/13 3.27 The Babel package
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
+)
+
+/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty:469: Package babel Error: Unknown option `brazilian'. Either you misspelled it
+(babel)                or the language definition file brazilian.ldf was not found.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.469 \ProcessOptions*
+                      
+Valid options are: shorthands=, KeepShorthandsActive,
+activeacute, activegrave, noconfigs, safe=, main=, math=
+headfoot=, strings=, config=, hyphenmap=, or a language name.
+
+Package babel Info: You haven't specified a language. I'll use 'nil'
+(babel)             as the main language. Reported on input line 499.
+(/usr/share/texlive/texmf-dist/tex/generic/babel/nil.ldf
+Language: nil 2018/11/13 3.27 Nil language
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/11/13 3.27 Babel common definitions
+\babel@savecnt=\count91
+\U@D=\dimen111
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count92
+))) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+No file CadernoHARD.aux.
 \openout1 = `CadernoHARD.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -98,60 +136,161 @@ LaTeX Font Info:    ... okay on input line 5.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 11.
+(Font)              <14.4> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 11.
+(Font)              <7> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 20.
+(Font)              <12> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 20.
+(Font)              <8> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 20.
+(Font)              <6> on input line 24.
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--22
+Underfull \hbox (badness 10000) in paragraph at lines 20--26
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--46
+Underfull \hbox (badness 10000) in paragraph at lines 38--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--46
+Underfull \hbox (badness 10000) in paragraph at lines 38--50
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 55--68
+Overfull \hbox (41.24731pt too wide) in paragraph at lines 52--56
+\T1/cmr/m/n/12 Inicialmente as ISAs tinham poucas instruções básicas, dificultando o trabalho dos programadores,
+ []
+
+
+Overfull \hbox (4.10103pt too wide) in paragraph at lines 52--56
+\T1/cmr/m/n/12 então foram implementadas instruções mais complexas, assim surgiram os \T1/cmr/bx/n/12 CISC \T1/cmr/m/n/12 (Complex
+ []
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 75.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--68
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
 
  []
 
-(./CadernoHARD.bbl
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
 
-) [2] [3] (./CadernoHARD.aux) ) 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--91
+
+ []
+
+[2]
+Overfull \hbox (4.05664pt too wide) in paragraph at lines 99--118
+\T1/cmr/m/n/12 Num programa, quando quero desviar o fluxo, geralmente são chamadas funções e métodos,
+ []
+
+
+Overfull \hbox (11.20494pt too wide) in paragraph at lines 99--118
+\T1/cmr/m/n/12 Ela faz com que o programa execute todas as intruções na subrotina, e então necessariamente
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--118
+
+ []
+
+
+Overfull \hbox (0.31735pt too wide) in paragraph at lines 99--118
+\T1/cmr/m/n/12 Para implementarmos uma \T1/cmr/bx/n/12 pilha\T1/cmr/m/n/12 , usamos um endereço []\T1/cmtt/m/n/12 $sp \T1/cmr/m/n/12 (\T1/cmr/bx/n/12 S\T1/cmr/m/n/12 tack \T1/cmr/bx/n/12 P\T1/cmr/m/n/12 ointer), esse endereço
+ []
+
+[3]
+No file CadernoHARD.bbl.
+[4] (./CadernoHARD.aux) ) 
 Here is how much of TeX's memory you used:
- 776 strings out of 494561
- 10733 string characters out of 6177455
- 75435 words of memory out of 5000000
- 4490 multiletter control sequences out of 15000+600000
- 8808 words of font info for 31 fonts, out of 8000000 for 9000
+ 1556 strings out of 494561
+ 20223 string characters out of 6177455
+ 92977 words of memory out of 5000000
+ 5237 multiletter control sequences out of 15000+600000
+ 14450 words of font info for 36 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 24i,6n,32p,452b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on CadernoHARD.pdf (3 pages, 65706 bytes).
+ 24i,6n,32p,453b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/marconi/.texlive2018/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/marconi/.texlive2018/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/marconi/.texlive2018/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/marconi/.texlive2018/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/marconi/.texlive2018/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/marconi/.texlive2018/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/marconi/.texlive2018/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/marconi/.texlive2018/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/marconi/.texlive2018/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on CadernoHARD.pdf (4 pages, 113137 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 365 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

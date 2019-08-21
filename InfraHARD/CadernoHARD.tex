@@ -9,12 +9,13 @@
 \nocite{*}
 
 \title{Caderno de Infraestrutura de Hardware}
-\author{Marconi Gomes}
+\author{Marconi Gomes e Lucas Rodrigues}
 
 \maketitle
 
 
 \section{Introdução - Instruções e funcionamento básico}
+    Código do Classroom: 215max.
     \subsection{Abstração}
     As linguages de programação podem ser divididas em \textbf{4 níveis}:
     \\- Linguagem de Máquina (binário)
@@ -24,7 +25,7 @@
     \\~\\O menor nível de abstração que o programador pode ver antes do código de realmente chegar ao binário, chama-se Instruction Set Architeture (ISA), que é um \textbf{repositório de instruções}, ela é realmente a interface entre Software e Hardware. Ela vai me dizer quais as intruções e registradores que posso usar, como acessar a memória, etc.
 
     \subsection{Assembly}
-    É uma linguagem que é dependente de arquitetua, ou seja, para cada tipo (x86, ARM) é um tipo de assembly diferente.
+    É uma linguagem que é dependente de arquitetura, ou seja, para cada tipo (x86, ARM) é um tipo de assembly diferente.
 
     \subsection{Compilador}
     \textbf{Definição:} é um programa que traduz de uma linguagem de mais alto nível (ex. Java) para uma de menor nível (assembly) que o computador entende.
@@ -68,23 +69,52 @@
     \\4º - rd (5 bits)  --- [Registrador destino que contém o resultado]
     \\5º - shamt (5 bits)  --- [Shift Amount, que não é utilizado para add e sub]
     \\6º - funct (6 bits) --- [Função que estende o opcode]
-    \\~\\\textbf{Representando ADD e SUB na Máquina:} É função do compílador associar as variáveis a registradores. Veja o exemplo:
+    \\~\\\textbf{Representando ADD e SUB na Máquina:} É função do compilador associar as variáveis a registradores. Veja o exemplo:
     \\~\\\textit{f = (g + h) – (i + j);}
-    \\~\\ As variáveis f, g, h, i, j estão atribuídas, respectivamente, aos registradores  \$s0, \$s1, \$s2, \$s3 e \$s4. O programa compilado em MIPS ficará da seguinte forma:
-    \\~\\\textit{add \$t0, \$s1, \$s2} (registrador \$t0 contém g + h)
-    \\\textit{add \$t1, \$s3, \$s4} (registrador \$t1 contém i + j)
-    \\\textit{sub \$s0, \$t0, \$t1} (f recebe \$t0 – \$t1, que equivale a (g + h)–(i + j))
+    \\~\\ As variáveis \textit{f}, \textit{g}, \textit{h}, \textit{i} e \textit{j} estão atribuídas, respectivamente, aos registradores  \$s0, \$s1, \$s2, \$s3 e \$s4. O programa compilado em MIPS ficará da seguinte forma:
+    \\~\\\verb#add \$t0, \$s1, \$s2# (registrador \$t0 contém g + h)
+    \\\verb#add \$t1, \$s3, \$s4# (registrador \$t1 contém i + j)
+    \\\verb#sub \$s0, \$t0, \$t1# (f recebe \$t0 – \$t1, que equivale a (g + h)–(i + j))
     \\~\\\textbf{Operações de Transferência de Dados:} move dados entre a memória e o registrador.
     \\- Para acessar uma word na memória, a instrução deve fornecer o \textbf{endereço da memória}.
     \\- A memória é apenas um array grande e unidimensional. O endereço da memória é o index do array.
-    \\~\\Operação \textbf{lw} (\textbf{l}oad \textbf{w}ord):
-    \\~\\\textit{lw r, offset(end\_inicial)}
+    \\~\\$\rightarrow$ Operação lw (\textbf{l}oad \textbf{w}ord):
+    \\~\\\verb#lw r, offset(end_inicial)#
     \\~\\- \textit{r}: registrador que será carregado;
     \\- \textit{offset}: uma constante de deslocamento;
     \\- \textit{end\_inicial}: um registrador de base que contém o endereço inicial.
-    
+    \\~\\$\rightarrow$ Operação sw (\textbf{s}tore \textbf{w}ord):
+    \\~\\\verb#sw r, offset(end_inicial)#
+    \\~\\- \textit{r}: registrador onde serão salvos os dados;
+    \\- \textit{offset}: uma constante de deslocamento;
+    \\- \textit{end\_inicial}: um registrador de base que contém o endereço inicial.
 
-    
-    
+    \subsection{Controle de Fluxo no MIPS}
+    Nas linguagens de máquina existem dois tipos de desvio:
+    \\- Branch $\leftrightarrow$ Desvio Condicional (feitos por meio de \textbf{if}s, \textbf{else}s, \textbf{case}s e \textbf{loop}s nas linguagens de alto nível.)
+    \\- Jump $\leftrightarrow$ Desvio Incondicional (feitos através de \textbf{GoTo}s)
+    \\\verb#Nota: a parte de fluxo de códigos se encontra incompleta.#
+
+    \subsection{Procedimentos}
+    Num programa, quando quero desviar o fluxo, geralmente são chamadas funções e métodos, chamados agora de \textbf{subrotinas}.
+    \\Ela faz com que o programa execute todas as intruções na subrotina, e então necessariamente ele tem que voltar à instrução onde ele estava.
+    \\~\\O operando relacionado ao label nas instruções na verdade é baseado na quantidade de linhas em relação à linha que está sendo executada.
+    \\Uma vez que uma I instrução é formada da seguinte maneira: op (6 bits), rs (5 bits), rt (5 bits) e \textbf{deslocamento (16bits)}.
+    \\~\\O fluxo é o seguinte: \\1 - A rotina que faz a chamada (caller) coloca os argumentos em um lugar que a subchamada (callee) pode acessar.
+    \\2 - O Caller transfere o controle para o callee
+    \\3 - O Callee adquire os recursos de armazenamento necessários
+    \\4 - O Callee executa suas próprias instruções
+    \\5 - O Callee coloca os valores de resultado onde o Caller possa acessá-los.
+    \\6 - Finalmente, o Callee retorna o controle ao Caller.
+    \\~\\Detalhes de cada passo:
+    \\1 - No MIPS, os registradores \$a0 até \$a3 são usados para armazenar argumentos.
+    \\2, 3, 4 e 5 - A subchamada é feita usando a instrução \verb#jal# (que tem formato igual ao jump), que significa \textbf{J}ump \textbf{A}nd \textbf{L}ink, seguido do label que identifica a função a ser iniciada.
+    Nessa mesma instrução, ela também guarda o endereço da próxima linha depois da chamada, para que ele assim que terminar a subchamada, volte para continuar o fluxo do código.
+    \\6 - Para retornar seu valor, usa-se a instrução \verb#jr reg#, que significa \textbf{J}ump \textbf{R}egister de formato: op = 0, rs = \verb#reg# (que é o registrador de retorno), rt = 0, rd = 0, shamt = 0 e funct = 8.
+    \\~\\E se precisarmos de mais registradores?
+    \\Se temos mais argumentos para o número de registradores disponíveis, usamos uma \textbf{pilha}. No MIPS, registradores que não estão sendo usados são salvos na pilha de memória, lá as informações excedentes necessárias
+    são guardadas.
+    \\Para implementarmos uma \textbf{pilha}, usamos um endereço \verb#$sp# (\textbf{S}tack \textbf{P}ointer), esse endereço é fixo e os demais elementos da pilha crescem com endereços menores.
+
 \bibliography{references}
 \end{document} 
